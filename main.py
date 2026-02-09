@@ -10,7 +10,9 @@ app = FastAPI()
 base_path = os.path.dirname(os.path.abspath(__file__))
 
 # Link the image folder
-app.mount("/static", StaticFiles(directory=base_path), name="static")
+static_path = os.path.join(base_path, "static")
+app.mount("/static", StaticFiles(directory=static_path), name="static")
+
 
 quotes_data = [
     {"text": "Man, this week has been tough, been sayin' that for a year", "author": "Little Simz"},
