@@ -4,62 +4,74 @@
     <title>Mitski Lyrics Generator</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
     <style>
-        body { 
-            background: #0f0f0f; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            font-family: 'Inter', sans-serif; 
-            color: white; 
-            margin-top: 50px; 
-        }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { margin: 0; font-weight: 800; font-size: 2.5rem; }
-        .header p { margin: 5px 0 0; color: #888; font-style: italic; }
+    body { 
+        background: #0f0f0f; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        font-family: 'Inter', sans-serif; 
+        color: white; 
+        margin: 0; /* Changed from margin-top to 0 */
+        padding: 20px;
+        min-height: 100vh;
+        justify-content: center;
+    }
+    .header { text-align: center; margin-bottom: 20px; }
+    .header h1 { margin: 0; font-weight: 800; font-size: 2rem; }
+    .header p { margin: 5px 0 0; color: #888; font-style: italic; }
 
-        .card-container {
-            width: 500px;
-            height: 600px;
-            background-image: url('/static/background.jpg'); 
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; 
-            align-items: center;     
-            padding: 50px;
-            box-sizing: border-box;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-        }
+    .card-container {
+        width: 100%;       /* Flexible width */
+        max-width: 450px;  /* Desktop limit */
+        height: 550px;     /* Slightly shorter for mobile aspect ratios */
+        background-image: url('/static/background.jpg'); 
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;     
+        padding: 40px;
+        box-sizing: border-box;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        transition: background-image 0.5s ease-in-out; /* Smooth transition */
+    }
 
-        .card-container::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.45); 
-            z-index: 1;
-        }
+    .card-container::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: 1;
+    }
 
-        .content { position: relative; z-index: 2; text-align: center; }
-        .lyric-text { font-size: 32px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
-        .author-text { font-size: 14px; font-weight: 400; color: #ddd; text-transform: uppercase; letter-spacing: 3px; }
+    .content { position: relative; z-index: 2; text-align: center; width: 100%; }
+    .lyric-text { font-size: 28px; font-weight: 800; line-height: 1.3; margin-bottom: 20px; word-wrap: break-word; }
+    .author-text { font-size: 12px; font-weight: 400; color: #ddd; text-transform: uppercase; letter-spacing: 2px; }
 
-        button {
-            margin-top: 40px;
-            padding: 15px 35px;
-            background: white;
-            color: black;
-            border: none;
-            border-radius: 50px;
-            font-weight: 800;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        button:hover { transform: scale(1.05); }
-    </style>
+    button {
+        margin-top: 30px;
+        padding: 15px 40px;
+        background: white;
+        color: black;
+        border: none;
+        border-radius: 50px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.3s;
+        -webkit-tap-highlight-color: transparent; 
+    }
+    
+    @media (max-width: 600px) {
+        .header h1 { font-size: 1.75rem; }
+        .card-container { height: 75vh; max-height: 500px; padding: 30px; }
+        .lyric-text { font-size: 24px; }
+        button { width: 100%; max-width: 250px; }
+    }
+</style>
 </head>
 <body>
     <div class="header">
@@ -98,4 +110,5 @@
         getNextQuote();
     </script>
 </body>
+
 </html>
