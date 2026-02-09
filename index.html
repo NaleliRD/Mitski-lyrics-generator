@@ -11,7 +11,7 @@
         align-items: center; 
         font-family: 'Inter', sans-serif; 
         color: white; 
-        margin: 0; /* Changed from margin-top to 0 */
+        margin: 0; 
         padding: 20px;
         min-height: 100vh;
         justify-content: center;
@@ -21,9 +21,9 @@
     .header p { margin: 5px 0 0; color: #888; font-style: italic; }
 
     .card-container {
-        width: 100%;       /* Flexible width */
-        max-width: 450px;  /* Desktop limit */
-        height: 550px;     /* Slightly shorter for mobile aspect ratios */
+        width: 100%;       
+        max-width: 450px;  
+        height: 550px;    
         background-image: url('/static/background.jpg'); 
         background-size: cover;
         background-position: center;
@@ -75,7 +75,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>Mitski Lyrics Generator</h1>
+        <h1>Mitski lyrics generator</h1>
         <p>For Mary</p>
     </div>
     <div class="card-container">
@@ -92,11 +92,10 @@
                 const res = await fetch('/get-quote');
                 const data = await res.json();
                 
-                // Update the text content
+               
                 document.getElementById('lyric-display').innerText = `"${data.text}"`;
                 document.getElementById('author-display').innerText = data.author;
                 
-                // Update the background image of the card-container
                 const card = document.querySelector('.card-container');
                 card.style.backgroundImage = `url('${data.background}')`;
                 
@@ -106,9 +105,10 @@
             }
         }
         
-        // Load the first quote and background on page load
+    
         getNextQuote();
     </script>
 </body>
 
 </html>
+
