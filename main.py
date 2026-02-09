@@ -17,7 +17,7 @@ quotes_data = [
     {"text": "One morning, this sadness will fossilize and I will forget how to cry", "author": "Fireworks"},
     {"text": "As I got older, I learned I'm a drinker Sometimes, a drink feels like family", "author": "Bug Like an Angel"},
     {"text": "I need something bigger than the sky, Hold it in my arms and know it's mine", "author": "Remember My Name"},
-    {"text"; "I'm not doing anything, My body's made of crushed little stars, And I'm not doing anything", "author": "My Body’s Made of Crushed Little Stars"},
+    {"text": "I'm not doing anything, My body's made of crushed little stars, And I'm not doing anything", "author": "My Body’s Made of Crushed Little Stars"},
     {"text": "Somebody kiss me, I'm going crazy,I'm walking 'round the house naked silver in the night", "author": "Blue Light"},
     {"text": "If I could, I'd be your little spoon and kiss your fingers forevermore", "author": "Your Best American Girl"},
     {"text": "And I don't blame you if you want to, Bury me in your memory, I'm not the girl I ought to be", "author": "Goodbye, My Danish Sweetheart"},
@@ -52,4 +52,5 @@ async def get_quote():
         "background": f"/static/{bg_image}"
 
     }
+
 
