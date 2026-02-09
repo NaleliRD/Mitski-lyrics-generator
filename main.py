@@ -15,10 +15,10 @@ app.mount("/static", StaticFiles(directory=static_path), name="static")
 
 
 quotes_data = [
-    {"text": "Man, this week has been tough, been sayin' that for a year", "author": "Little Simz"},
-    {"text": "The only way to do great work is to love what you do.", "author": "Steve Jobs"},
-    {"text": "Stay hungry, stay foolish.", "author": "Steve Jobs"},
-    {"text": "Everything you've ever wanted is on the other side of fear.", "author": "George Addair"}
+    {"text": "How do I let our love die When you're the only other keeper Of my most precious memories?", "author": "I'll Change for You"},
+    {"text": "One morning, this sadness will fossilize And I will forget how to cry", "author": "Fireworks"},
+    {"text": "As I got older, I learned I'm a drinker Sometimes, a drink feels like family": "Bug Like an Angel"},
+    {"text": "I need something bigger than the sky Hold it in my arms and know it's mine", "author": "Remember My Name"}
 ]
 
 @app.get("/", response_class=HTMLResponse)
