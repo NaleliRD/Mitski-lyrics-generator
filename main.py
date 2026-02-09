@@ -22,7 +22,7 @@ quotes_data = [
     {"text": "If I could, I'd be your little spoon and kiss your fingers forevermore", "author": "Your Best American Girl"},
     {"text": "And I don't blame you if you want to, Bury me in your memory, I'm not the girl I ought to be", "author": "Goodbye, My Danish Sweetheart"},
     {"text": "I don't need the world to see that I've been the best I can be, but I don't think I could stand to be where you don't see me", "author": "Francis Forever"},
-    {"text": "I always wanted to die clean and pretty, But I'd be too busy on working days", "author": "Last Words of a Shooting Star"},
+    {"text": "I always wanted to die clean and pretty, But I'd be too busy on working days", "author": "Last Words of a Shooting Star"}
 ]
 
 
@@ -32,7 +32,7 @@ background_images = [
     "background3.jpg",
     "background4.jpg",
     "background5.jpg",
-    "background6.jpg",
+    "background6.jpg"
 ]
 
 @app.get("/", response_class=HTMLResponse)
@@ -50,4 +50,5 @@ async def get_quote():
         "text": quote["text"],
         "author": quote["author"],
         "background": f"/static/{bg_image}"
+
     }
