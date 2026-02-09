@@ -52,3 +52,4 @@ async def get_quote():
         "background": f"/static/{bg_image}"
 
     }
+
