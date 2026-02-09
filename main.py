@@ -13,7 +13,7 @@ app.mount("/static", StaticFiles(directory=static_path), name="static")
 
 
 quotes_data = [
-    {"text": "How do I let our love die, When you're the only other keeper Of my most precious memories?", "author": "I'll Change for You"},
+    {"text": "How do I let our love die, When you're the only other keeper of my most precious memories?", "author": "I'll Change for You"},
     {"text": "One morning, this sadness will fossilize and I will forget how to cry", "author": "Fireworks"},
     {"text": "As I got older, I learned I'm a drinker Sometimes, a drink feels like family", "author": "Bug Like an Angel"},
     {"text": "I need something bigger than the sky, Hold it in my arms and know it's mine", "author": "Remember My Name"},
@@ -52,5 +52,6 @@ async def get_quote():
         "background": f"/static/{bg_image}"
 
     }
+
 
 
